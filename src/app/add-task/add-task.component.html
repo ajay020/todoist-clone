@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <form #f="ngForm">
+        <input
+          ngModel
+          name="name"
+          class="add-input form-control shadow-none"
+          placeholder="Task Name"
+          required
+        />
+        <input
+          ngModel
+          name="description"
+          class="add-input form-control shadow-none"
+          placeholder="Description"
+        />
+      </form>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end mt-2">
+    <button (click)="cancelTask()" class="btn btn-sm btn-secondary">
+      Cancel
+    </button>
+    <button [disabled]="f.invalid" (click)="addTask(f.value)" class="btn btn-sm btn-secondary ms-2">
+      Add
+    </button>
+  </div>
+</div>

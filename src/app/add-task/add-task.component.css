@@ -1,0 +1,11 @@
+.add-input{
+    border: none;
+    /* border-bottom: 1px solid black; */
+    border-radius: 0;
+}
+.add-input:focus{
+    outline: none !important;
+}
+.container{
+    --bs-gutter-x: 0;
+}

@@ -1,0 +1,15 @@
+<div class="container" style="width: 40rem">
+  <div *ngFor="let task of tasks$ | async">
+    <task [task]="task"></task>
+  </div>
+  <button
+    (click)="toggle()"
+    *ngIf="displayAddBtn; else displayAddComponent"
+    class="btn btn-sm btn-light"
+  >
+     Add
+  </button>
+  <ng-template #displayAddComponent>
+    <add-task (hideAddComponent)="toggle()"></add-task>
+  </ng-template>
+</div>
