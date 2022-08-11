@@ -1,0 +1,16 @@
+.main{
+    width: 60%;
+}
+
+.open{
+    margin-left: 350px;
+    /* min-width: 380px; */
+    transition: all 0.25s 0s ease-out;
+}
+
+.close{
+    margin-left: auto;
+    /* background-color: gray; */
+    /* min-width: 380px; */
+    transition: all 0.25s 0s ease-out;
+}

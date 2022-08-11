@@ -14,8 +14,8 @@ export class TaskService {
         },
         {
             id: "2",
-            name: "Now",
-            description: 'Description 2',
+            name: "Feat is mind killer",
+            description: 'Let is pass and after it has gone see its path.',
             dueDate: 'This moment'
         },
     ]

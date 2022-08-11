@@ -1,0 +1,9 @@
+<navbar (sidebarStatus)="handleSidebar($event)" ></navbar>
+<div class="d-flex pt-2">
+    <!-- <div class="side-menu"> -->
+        <sidebar [sidebarStatus]="sidebarStatus" ></sidebar>
+    <!-- </div> -->
+    <main class="container main" [ngClass]="sidebarStatus ? 'open' : 'close' ">
+        <tasks></tasks>
+    </main>
+</div>
