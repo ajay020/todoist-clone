@@ -1,7 +1,35 @@
-<div class="card border-left-0 border-right-0 my-2">
-    <div  class="card-body">
-      <h5 class="card-title">{{task.name}}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{task.description}}</h6>
-      <p class="card-text">{{task.dueDate}}</p>
+<div>
+    <div *ngIf="!showEditForm; else editForm" class="card my-2">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <h6 class="card-title">{{ task.name }}</h6>
+            <div>
+              <fa-icon
+                (click)="editTask(task)"
+                class=" btn-action me-2"
+                size="sm"
+                [icon]="['far', 'edit']"
+                [styles]="{ color: 'gray' }"
+              ></fa-icon>
+      
+              <fa-icon
+                (click)="deleteTask(task)"
+                class=" btn-action delete-btn"
+                [icon]="['far', 'trash-can']"
+                size="sm"
+                [styles]="{ color: 'gray' }"
+              ></fa-icon>
+            </div>
+          </div>
+          <p class="card-subtitle mb-2 text-muted">{{ task.description }}</p>
+          <div class="d-flex justify-content-between">
+              <p class="card-text text-muted">{{ task.dueDate }}</p>
+              <p class="cart-text text-muted">Personal</p>
+          </div>
+        </div>
     </div>
+    <ng-template #editForm>
+        <add-task [task]="task" (toggleTaskCardDisplay)="toggle()">Save</add-task>
+    </ng-template>
 </div>
+

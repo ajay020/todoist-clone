@@ -14,6 +14,7 @@ export class TasksComponent implements OnInit {
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+    console.log("tasks called");
     this.tasks$ =  this.taskService.getAllTasks()
   }
 

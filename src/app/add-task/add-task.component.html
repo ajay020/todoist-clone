@@ -3,14 +3,14 @@
     <div class="card-body">
       <form #f="ngForm">
         <input
-          ngModel
-          name="name"
           class="add-input form-control shadow-none"
+          [ngModel]="task.name"
+          name="name"
           placeholder="Task Name"
           required
-        />
-        <input
-          ngModel
+          />
+          <input
+          [ngModel]="task.description"
           name="description"
           class="add-input form-control shadow-none"
           placeholder="Description"
@@ -23,7 +23,7 @@
       Cancel
     </button>
     <button [disabled]="f.invalid" (click)="addTask(f.value)" class="btn btn-sm btn-secondary ms-2">
-      Add
+      <ng-content></ng-content>
     </button>
   </div>
 </div>

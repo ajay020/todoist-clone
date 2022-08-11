@@ -1,0 +1,12 @@
+.btn-action{
+    display: none;
+}
+.card:hover .btn-action{
+    display: inline;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.delete-btn:hover{
+    color: red;
+}
