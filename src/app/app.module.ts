@@ -1,17 +1,30 @@
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { FontAwesomeModule , FaIconLibrary} from '@fortawesome/angular-fontawesome';
-import { faEdit, faTrashCan,  faBarChart } from '@fortawesome/free-regular-svg-icons';
+import { RouterModule } from '@angular/router';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBarChart, faEdit, faTrashCan } from '@fortawesome/free-regular-svg-icons';
 
+import { environment } from './../environments/environment';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { AppComponent } from './app.component';
+import { AuthService } from './auth.service';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SignupComponent } from './signup/signup.component';
 import { TaskService } from './task.service';
 import { TaskComponent } from './task/task.component';
 import { TasksComponent } from './tasks/tasks.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './auth.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,15 +34,30 @@ import { HomeComponent } from './home/home.component';
     TasksComponent,
     AddTaskComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
-BrowserModule,
+  BrowserModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule, // storage
+
+    RouterModule.forRoot([
+        {path:"home", component: HomeComponent , canActivate: [AuthGuard]},
+        {path:"login", component: LoginComponent},
+        {path:"signup", component: SignupComponent},
+        {path:"**", component: NotFoundComponent},
+    ])
   ],
   providers: [
-    TaskService
+    TaskService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

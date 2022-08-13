@@ -14,7 +14,7 @@ export class TaskComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log("task oninit.", this.task);
+    // console.log("task oninit.", this.task);
   }
 
   editTask(task:any){
@@ -24,14 +24,13 @@ export class TaskComponent implements OnInit, OnDestroy {
   deleteTask(task: any){
     // this.showEditForm = !this.showEditForm;
     this.taskService.delete(task.id);
-    console.log(task.id);
   }
 
   toggle(){
     this.showEditForm = !this.showEditForm;
   }
   ngOnDestroy(): void {
-      console.log("destoryed task", this.task.id )
+    //   console.log("destoryed task", this.task.id )
   }
 
 }
