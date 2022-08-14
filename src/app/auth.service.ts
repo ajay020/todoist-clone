@@ -86,4 +86,9 @@ export class AuthService {
     const user = JSON.parse(localStorage.getItem('user')!);
     return user !== null ;
   }
+
+  get userId(){
+    let user = JSON.parse(localStorage.getItem('user')!);
+    return user ? user.uid : null;
+  }
 }

@@ -1,26 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'add-project',
+  selector: 'add-project-modal',
   templateUrl: './add-project.component.html',
-  styleUrls: ['./add-project.component.css']
 })
-export class AddProjectComponent implements OnInit {
-  
-    displayStyle = 'none';
+export class AddProjectComponent {
+    // @Input('project') project!: any; To edit the project
 
-  constructor() { }
-
-  ngOnInit(): void {
+   @Output() passEntry: EventEmitter<any> = new EventEmitter();
+    
+  constructor(public activeModal: NgbActiveModal) {
   }
 
-  
-  openPopup() {
-    this.displayStyle = 'block';
-    console.log(this.displayStyle)
+  addProject(formData : any){
+    this.passEntry.emit(formData);
+    this.activeModal.dismiss();
   }
 
-  closePopup() {
-    this.displayStyle = 'none';
-  }
 }
