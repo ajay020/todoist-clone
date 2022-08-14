@@ -23,6 +23,7 @@ import { TaskComponent } from './task/task.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { AuthGuard } from './auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 
 
@@ -36,7 +37,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SidebarComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AddProjectComponent
   ],
   imports: [
   BrowserModule,
