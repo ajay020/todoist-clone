@@ -20,19 +20,16 @@ export class AddTaskComponent implements OnInit {
   }
 
   addTask(newtask: any){
-    const projectId = this.activatedRoute.snapshot.queryParamMap.get('id');
-    newtask.project_id = projectId;
-    
     const isObjectEmpty = Object.keys(this.task).length === 0;
 
     if(isObjectEmpty){
+        const projectId = this.activatedRoute.snapshot.queryParamMap.get('id');
+        newtask.project_id = projectId;
         this.taskService.addTask(newtask, projectId);
         this.hideAddComponent.emit(null);
-        console.log("new task added")
     }else{
-        this.taskService.update( {...this.task,  ...newtask});
+        this.taskService.update({...this.task, ...newtask});
         this.toggleTaskCardDisplay.emit(null);
-        console.log("task updated");
     }
   }
 

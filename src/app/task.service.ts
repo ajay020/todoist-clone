@@ -35,7 +35,9 @@ export class TaskService {
         .pipe(map(snapshot =>{
             let list : any[] = [];
             snapshot.forEach(doc =>{
-                list.push(doc.payload.doc.data());
+                let data = doc.payload.doc.data() as {};
+                let id = doc.payload.doc.id;
+                list.push( { key: id, ...data  });
             })
             return list;
         }))
@@ -51,19 +53,14 @@ export class TaskService {
   }
 
   update(task: any) {
-    console.log(task);
-    let index = this.tasks.findIndex((t) => t.id === task.id);
-    if (index > -1) {
-      this.tasks[index] = { ...task };
-    }
-
-    console.log(this.tasks);
+    // console.log(task);
+    this.firestore.collection('items/'+ task.user_id +"/userItems/")
+        .doc(task.key).set(task);
   }
 
-  delete(taskId: any) {
-    let index = this.tasks.findIndex((task) => task.id === taskId);
-    if (index > -1) {
-      this.tasks.splice(index, 1);
-    }
+  delete(task: any) {
+    // console.log(task);
+    this.firestore.collection('items/'+ task.user_id +"/userItems/")
+    .doc(task.key).delete();
   }
 }

@@ -23,7 +23,7 @@ export class TaskComponent implements OnInit, OnDestroy {
 
   deleteTask(task: any){
     // this.showEditForm = !this.showEditForm;
-    this.taskService.delete(task.id);
+    this.taskService.delete(task);
   }
 
   toggle(){

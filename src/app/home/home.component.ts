@@ -34,6 +34,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.taskService.getAllTasks().subscribe(result =>{
         this.items = result;
+        // console.log("changed collec");
+        this.filterItems(); // gets called every time task list modified.
     })
 
     this.taskSubscription = this.activeRoute.queryParams.pipe()
@@ -41,6 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.projectId = params['id'];
         this.filterItems()
     })
+
   }
 
   filterItems(){
