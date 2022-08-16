@@ -4,6 +4,8 @@ import { Subscription, Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddProjectComponent } from './../add-project/add-project.component';
 import { ProjectService } from './../project.service';
+import { DeleteProjectComponent } from '../delete-project/delete-project.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'sidebar',
@@ -20,6 +22,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   constructor(
     private projectService: ProjectService,
     private dataService: NavdataService,
+    private router: Router,
     private modalService: NgbModal) {}
 
   ngOnInit(): void {
@@ -30,9 +33,34 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.projectSubscription =  this.projectService.getAllProjects()
         .subscribe(data => {
             this.projects = data 
-            // console.log(this.projects)
+            console.log(this.projects)
         });
   }
+
+  editProject(project: any){
+    console.log(project);
+  }
+
+  openDeleteModal(project: any){
+    const modalRef = this.modalService.open(DeleteProjectComponent, {
+        size: 's',
+        centered: false,
+        windowClass: 'dark-modal'
+    });
+
+    modalRef.componentInstance.project = project;
+
+     // get project data from add-project modal
+     modalRef.componentInstance.passEntry.subscribe( (canDeleteProject:boolean )=>{
+        console.log(canDeleteProject);
+        if(canDeleteProject){
+            this.projectService.delete(project.key);
+            this.router.navigate(['project'])
+        }
+    })
+
+  }
+
 
   openModel(){
     const modalRef = this.modalService.open(AddProjectComponent, {

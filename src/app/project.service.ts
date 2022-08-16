@@ -47,10 +47,24 @@ export class ProjectService {
     this.firestore.collection('projects/' +uid + '/userProjects'  ). add(project);
   }
  
-  addItem(item : Item){
+  delete(projectId: any){
     let uid  = this.authService.userId;
-    const collref =  this.firestore.collection('projects/'+ uid + "/items");
-    collref.add(item);
+    this.firestore.doc('projects/' + uid + "/userProjects/" + projectId)
+    .delete()
+    .then( () =>{
+        this.firestore.collection('items/' + uid + "/userItems", ref => ref.where("project_id", "==", projectId ))
+        .get()
+        .subscribe(data =>{ 
+            data.forEach(d => {
+                // console.log(d.ref.path) 
+                d.ref.delete();
+            });
+        });
+    })
+    .catch(error =>{
+        console.log(error)
+    })
+    
   }
 
 }

@@ -13,4 +13,17 @@
 }
 .list-group li{
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
+.list-ellipsis{
+    /* background-color: burlywood; */
+    display: none;
+}
+ .list-group li:hover .list-ellipsis{
+    display: inline-block;
+}
+
+.elps-icon:hover{
+    color: black;
+} 

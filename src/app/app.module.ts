@@ -32,7 +32,8 @@ import { AuthGuard } from './auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { CommonModule } from '@angular/common';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DeleteProjectComponent } from './delete-project/delete-project.component';
 
 @NgModule({
   declarations: [
@@ -46,17 +47,18 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     SignupComponent,
     AddProjectComponent,
+    DeleteProjectComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
     FontAwesomeModule,
-
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule, // storage
+    NgbModule,
 
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
