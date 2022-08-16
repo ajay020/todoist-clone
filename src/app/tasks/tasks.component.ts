@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TaskService } from './../task.service';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from './../project.service';
 
 @Component({
   selector: 'tasks',
@@ -8,14 +10,13 @@ import { TaskService } from './../task.service';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-   tasks$!: Observable<any>;
+   @Input('items') items :any [] = [];
    displayAddBtn:boolean = true;
 
-  constructor(private taskService: TaskService) { }
+  constructor(private projectService: ProjectService, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log("tasks called");
-    this.tasks$ =  this.taskService.getAllTasks()
+    // this.projectService.getFullProjects().subscribe(res => console.log(res));
   }
 
   toggle(){

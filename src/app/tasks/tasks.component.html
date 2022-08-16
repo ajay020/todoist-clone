@@ -1,6 +1,7 @@
 <div class="container">
-  <div *ngFor="let task of tasks$ | async">
-    <task [task]="task"></task>
+    <!-- <h4>{{project.name}}</h4> -->
+  <div *ngFor="let item of items">
+    <task [task]="item"></task>
   </div>
   <button
     (click)="toggle()"

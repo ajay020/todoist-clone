@@ -4,7 +4,7 @@
         <sidebar></sidebar>
     <!-- </div> -->
     <main class="container main" [ngClass]="sidebarStatus ? 'open' : 'close' ">
-        <tasks></tasks>
+        <tasks [items]="filteredItems" ></tasks>
+        <!-- <router-outlet ></router-outlet> -->
     </main>
 </div>
-<router-outlet></router-outlet>

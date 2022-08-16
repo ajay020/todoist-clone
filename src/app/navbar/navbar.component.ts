@@ -7,7 +7,7 @@ import { AuthService } from './../auth.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit, OnChanges {
+export class NavbarComponent implements OnInit {
 
   isSidebarOpen = false;
   user! : any;  
@@ -17,15 +17,9 @@ export class NavbarComponent implements OnInit, OnChanges {
     let storedUser = localStorage.getItem('user');
     if(storedUser){
         this.user = JSON.parse(storedUser);
-        console.log(storedUser)
+        // console.log(storedUser)
     }
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-      console.log("onchange is called")
-  }
-
-
 
   toggleSidebar(){
     this.isSidebarOpen = !this.isSidebarOpen;

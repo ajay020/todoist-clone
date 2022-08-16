@@ -16,7 +16,7 @@ export class AuthService {
     this.auth.onAuthStateChanged(user =>{
         if(user){
             // user is loggedin
-            console.log(user);
+            // console.log(user);
         }else{
             // user is logout
             // localStorage.removeItem('user');
@@ -33,7 +33,7 @@ export class AuthService {
       .then((userCredential) => {
         const user = userCredential.user;
         this.setUserData(user, username);
-        this.router.navigate(['home']);
+        this.router.navigate(['']);
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -56,7 +56,7 @@ export class AuthService {
             .subscribe(shot =>{
                 let result = shot.data();
                 localStorage.setItem('user', JSON.stringify(result));
-                this.router.navigate(['home']);
+                this.router.navigate(['']);
             })
     } catch (error) {
         console.log(error);

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { NavdataService } from './../navdata.service';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddProjectComponent } from './../add-project/add-project.component';
 import { ProjectService } from './../project.service';
@@ -14,6 +14,8 @@ export class SidebarComponent implements OnInit, OnDestroy {
   isListExpended = false;
   sidebarStatus! : boolean;
   subscription!: Subscription;
+  projectSubscription! : Subscription;
+  projects!: any[];  
 
   constructor(
     private projectService: ProjectService,
@@ -24,6 +26,12 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.subscription = this.dataService.sidebarStatus$.subscribe(status =>{
         this.sidebarStatus = status;
     })
+
+    this.projectSubscription =  this.projectService.getAllProjects()
+        .subscribe(data => {
+            this.projects = data 
+            // console.log(this.projects)
+        });
   }
 
   openModel(){
@@ -35,7 +43,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
     // get project data from add-project modal
     modalRef.componentInstance.passEntry.subscribe( (data:any )=>{
-        this.projectService.create(data);
+        this.projectService.create(data.name);
     })
   }
 
@@ -45,5 +53,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
       this.subscription.unsubscribe();
+      this.projectSubscription.unsubscribe();
   }
 }
