@@ -3,13 +3,16 @@
   <div *ngFor="let item of items">
     <task [task]="item"></task>
   </div>
-  <button
+  <p *ngIf="projectCount > 0">
+    <button
     (click)="toggle()"
     *ngIf="displayAddBtn; else displayAddComponent"
     class="btn btn-sm btn-light"
   >
      Add
   </button>
+  </p>
+ 
   <ng-template #displayAddComponent>
     <add-task (hideAddComponent)="toggle()">Add</add-task>
   </ng-template>

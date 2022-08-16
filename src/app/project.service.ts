@@ -35,6 +35,7 @@ export class ProjectService {
     }
 
 
+
   async create(name : string){
     let uid = this.authService.userId;
 
@@ -65,6 +66,12 @@ export class ProjectService {
         console.log(error)
     })
     
+  }
+
+  getProjectCount(){
+    return this.getAllProjects().pipe(map(value => {
+        return value.length;
+    }));
   }
 
 }

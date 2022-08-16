@@ -12,11 +12,14 @@ import { ProjectService } from './../project.service';
 export class TasksComponent implements OnInit {
    @Input('items') items :any [] = [];
    displayAddBtn:boolean = true;
+   projectCount!: number;
 
   constructor(private projectService: ProjectService, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.projectService.getFullProjects().subscribe(res => console.log(res));
+     this.projectService.getProjectCount().subscribe(count => {  
+        this.projectCount = count;
+    })
   }
 
   toggle(){

@@ -43,7 +43,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.projectId = params['id'];
         this.filterItems()
     })
-
   }
 
   filterItems(){
