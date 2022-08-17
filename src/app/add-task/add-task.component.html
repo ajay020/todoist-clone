@@ -8,21 +8,74 @@
           name="name"
           placeholder="Task Name"
           required
-          />
-          <input
+        />
+        <input
           [ngModel]="task.description"
           name="description"
           class="add-input form-control shadow-none"
           placeholder="Description"
         />
+        <div class="d-flex justify-content-between">
+          <div class="form-group">
+            <label for="datePicker" class="ml-2"> Select Due Date: </label>
+            <input
+              id="datePicker"
+              name="dueDate"
+              type="date"
+              class="ms-2"
+              ngModel
+              #dt
+            />
+          </div>
+          <div class="priority-container" placement="top" ngbTooltip="Set the priority p1, p2, p3, p4">
+            <p
+             class="priority-popover px-3"
+             placement="top"
+             [ngbPopover]="popContent"
+             >
+                <i style="color:darkgray" class=" flag-icon fa-solid fa-font-awesome"></i>
+            </p>
+           
+          </div>
+          <!-- <div ngbDropdown placement="top-end" class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Toggle dropup</button>
+            <select name="priority" ngModel ngbDropdownMenu aria-labelledby="dropdownBasic2">
+              <option ngbDropdownItem>Action - 1</option>
+              <option ngbDropdownItem>Another Action</option>
+              <option ngbDropdownItem>Something else is here</option>
+            </select>
+          </div> -->
+        </div>
+        <ng-template #popContent>
+          <ul class="list-group pointer">
+            <li (click)="selectPriority(1)" class="list-group-item list-group-item-action">
+              <i style="color:red" class="fa-solid fa-flag me-2"></i> Priority 1
+            </li>
+            <li (click)="selectPriority(2)" class="list-group-item list-group-item-action">
+              <i style="color:ornage" class="fa-solid fa-flag me-2"></i> Priority 2
+            </li>
+            <li (click)="selectPriority(3)" class="list-group-item list-group-item-action">
+              <i style="color:blue" class="fa-solid fa-flag me-2"></i> Priority 3
+            </li>
+            <li (click)="selectPriority(4)" class="list-group-item list-group-item-action">
+              <i style="color:gray" class="fa-solid fa-font-awesome me-2"></i> Priority 4
+            </li>
+          </ul>
+        </ng-template>
       </form>
     </div>
+    <!-- <p>{{dt.value | date:'EEE, MMM d'}}</p> -->
+    <p>{{f.value| json}}</p>
   </div>
   <div class="d-flex justify-content-end mt-2">
     <button (click)="cancelTask()" class="btn btn-sm btn-secondary">
       Cancel
     </button>
-    <button [disabled]="f.invalid" (click)="addTask(f.value)" class="btn btn-sm btn-secondary ms-2">
+    <button
+      [disabled]="f.invalid"
+      (click)="addTask(f.value)"
+      class="btn btn-sm btn-secondary ms-2"
+    >
       <ng-content></ng-content>
     </button>
   </div>

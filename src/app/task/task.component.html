@@ -23,7 +23,7 @@
           </div>
           <p class="card-subtitle mb-2 text-muted">{{ task.description }}</p>
           <div class="d-flex justify-content-between">
-              <p class="card-text text-muted">{{ task.dueDate }}</p>
+              <p class="card-text text-muted border">{{ task.dueDate | date:'EEE, MMM d' }}</p>
               <p class="cart-text text-muted">Personal</p>
           </div>
         </div>

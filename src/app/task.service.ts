@@ -53,8 +53,8 @@ export class TaskService {
   }
 
   update(task: any) {
-    // console.log(task);
-    this.firestore.collection('items/'+ task.user_id +"/userItems/")
+    console.log(task);
+    return this.firestore.collection('items/'+ task.user_id +"/userItems/")
         .doc(task.key).set(task);
   }
 

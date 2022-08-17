@@ -31,7 +31,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { AuthGuard } from './auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddProjectComponent } from './add-project/add-project.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteProjectComponent } from './delete-project/delete-project.component';
 
@@ -79,7 +79,11 @@ import { DeleteProjectComponent } from './delete-project/delete-project.componen
       { path: '**', component: NotFoundComponent },
     ]),
   ],
-  providers: [TaskService, AuthService],
+  providers: [
+    TaskService,
+    AuthService,
+    DatePipe
+    ],
   bootstrap: [AppComponent],
 })
 export class AppModule {

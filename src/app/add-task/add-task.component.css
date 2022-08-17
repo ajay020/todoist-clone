@@ -9,3 +9,15 @@
 .container{
     --bs-gutter-x: 0;
 }
+.priority-popover{
+    cursor: pointer;
+}
+.flag-icon:hover{
+    color:black !important;
+}
+/* .priority-container{
+    cursor: pointer;
+} */
+.list-group-item{
+    cursor: pointer;
+}
