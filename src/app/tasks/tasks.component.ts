@@ -11,6 +11,7 @@ import { ProjectService } from './../project.service';
 })
 export class TasksComponent implements OnInit {
    @Input('items') items :any [] = [];
+   @Input('selectedProjectName') selectedProjectName!:string;
    displayAddBtn:boolean = true;
    projectCount!: number;
 
@@ -25,5 +26,4 @@ export class TasksComponent implements OnInit {
   toggle(){
     this.displayAddBtn = !this.displayAddBtn;
   }
-
 }

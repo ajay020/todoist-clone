@@ -1,10 +1,10 @@
 <navbar ></navbar>
 <div class="d-flex pt-2">
     <!-- <div class="side-menu"> -->
-        <sidebar></sidebar>
+        <sidebar (onSelectProject)="setProjectName($event)" ></sidebar>
     <!-- </div> -->
     <main class="container main" [ngClass]="sidebarStatus ? 'open' : 'close' ">
-        <tasks [items]="filteredItems" ></tasks>
+        <tasks [selectedProjectName]="selectedProjectName" [items]="filteredItems" ></tasks>
         <!-- <router-outlet ></router-outlet> -->
     </main>
 </div>

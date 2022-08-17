@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
 import { NavdataService } from './../navdata.service';
 import { Subscription, Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -18,6 +18,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   projectSubscription! : Subscription;
   projects!: any[];  
+  @Output('onSelectProject') onSelectProject = new EventEmitter();
 
   constructor(
     private projectService: ProjectService,
@@ -33,8 +34,12 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.projectSubscription =  this.projectService.getAllProjects()
         .subscribe(data => {
             this.projects = data 
-            console.log(this.projects)
+            // console.log(this.projects)
         });
+  }
+
+  selectProject(project:any){
+    this.onSelectProject.emit(project.name);
   }
 
   editProject(project: any){

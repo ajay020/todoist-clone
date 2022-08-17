@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
    projectId!:string;
    taskSubscription!: Subscription;
    filteredItems: any[] = [];
+   selectedProjectName!: string;
 
   constructor(
     private router: Router,
@@ -49,6 +50,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.filteredItems = this.projectId 
     ?this.items.filter(item => item.project_id === this.projectId)
     : this.items;
+  }
+
+  setProjectName(projectName:string){
+    this.selectedProjectName = projectName;
   }
 
   ngOnDestroy(): void {
