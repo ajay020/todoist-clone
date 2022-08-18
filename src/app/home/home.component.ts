@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         })
 
     this.taskService.getAllTasks().subscribe(result =>{
-        this.items = result;
+        this.items = result.filter(task => task.completed === false);
         // console.log("changed collec");
         this.filterItems(); // gets called every time task list modified.
     })

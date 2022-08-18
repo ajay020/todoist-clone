@@ -4,6 +4,8 @@
         <sidebar (onSelectProject)="setProjectName($event)" ></sidebar>
     <!-- </div> -->
     <main class="container main" [ngClass]="sidebarStatus ? 'open' : 'close' ">
+        <!-- <app-toasts></app-toasts> -->
+        <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
         <tasks [selectedProjectName]="selectedProjectName" [items]="filteredItems" ></tasks>
         <!-- <router-outlet ></router-outlet> -->
     </main>

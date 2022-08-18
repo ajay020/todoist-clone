@@ -14,7 +14,7 @@ export class AddTaskComponent implements OnInit {
   @Output('toggleTaskCardDisplay')toggleTaskCardDisplay = new EventEmitter();
 
   dueDate!: string;
-  priority: number = 1;
+  priority: number = 4;
 
   constructor(private taskService: TaskService, private activatedRoute: ActivatedRoute) { }
 
@@ -31,6 +31,8 @@ export class AddTaskComponent implements OnInit {
         const projectId = this.activatedRoute.snapshot.queryParamMap.get('id');
         newtask.project_id = projectId;
         newtask.priority = this.priority;
+        newtask.completed = false;
+        newtask.description = newtask.description || '';
         this.taskService.addTask(newtask, projectId);
         this.hideAddComponent.emit(null);
     }else{

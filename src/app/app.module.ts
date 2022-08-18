@@ -34,6 +34,10 @@ import { AddProjectComponent } from './add-project/add-project.component';
 import { CommonModule, DatePipe } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DeleteProjectComponent } from './delete-project/delete-project.component';
+import { ToastService } from './toast.service';
+import { ToastsContainer } from './toast-container/toast-container.component';
+
+
 
 @NgModule({
   declarations: [
@@ -48,9 +52,10 @@ import { DeleteProjectComponent } from './delete-project/delete-project.componen
     SignupComponent,
     AddProjectComponent,
     DeleteProjectComponent,
+    ToastsContainer,
   ],
   imports: [
-    BrowserModule,
+BrowserModule,
     CommonModule,
     FormsModule,
     FontAwesomeModule,
@@ -59,6 +64,7 @@ import { DeleteProjectComponent } from './delete-project/delete-project.componen
     AngularFireAuthModule, // auth
     AngularFireStorageModule, // storage
     NgbModule,
+
 
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
@@ -82,7 +88,8 @@ import { DeleteProjectComponent } from './delete-project/delete-project.componen
   providers: [
     TaskService,
     AuthService,
-    DatePipe
+    DatePipe,
+    ToastService
     ],
   bootstrap: [AppComponent],
 })

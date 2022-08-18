@@ -44,6 +44,8 @@ export class TaskService {
   }
 
   addTask(task: any, projectId: any) {
+    console.log(task);
+    
     const uid = this.authService.userId;
     task.user_id = uid;
 

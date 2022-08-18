@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { TaskService } from './../task.service';
+import { ToastService } from './../toast.service';
 
 @Component({
   selector: 'task',
@@ -17,11 +18,19 @@ export class TaskComponent implements OnInit, OnDestroy {
     '4': 'gray',
   }
 
-  constructor(private taskService: TaskService) { 
+  constructor(private taskService: TaskService, private toastService: ToastService) { 
   }
 
 
   ngOnInit(): void {
+    // console.log(this.task);
+  }
+
+  completeTask(){
+    this.task.completed = true;
+    this.taskService.update(this.task);
+
+    this.toastService.show("1 Task Completed!" , { classname: 'bg-success text-light', delay: 3000 });
   }
 
   getColor(priority:any){
