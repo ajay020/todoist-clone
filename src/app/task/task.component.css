@@ -1,12 +1,37 @@
 .btn-action{
     display: none;
 }
-.card:hover .btn-action{
-    display: inline;
+.task{
     cursor: pointer;
-    padding: 2px;
+}
+.task:hover .btn-action{
+    display: inline-block;
+    cursor: pointer;
 }
 
 .delete-btn:hover{
     color: red;
+}
+.complete-task{
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.check-icon{
+    /* padding: 4px; */
+    /* font-weight: 400px; */
+    /* width: 4px !important; */
+    /* height: 4px !important ; */
+    /* color: black; */
+    display: none;
+}
+.complete-task:hover .check-icon{
+    display: inline-block;
 }

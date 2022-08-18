@@ -1,9 +1,17 @@
 <div>
-    <div *ngIf="!showEditForm; else editForm" class="card my-2">
-        <div class="card-body">
+    <div *ngIf="!showEditForm; else editForm" class="task border d-flex  mt-2 p-2 ">
+        <div class="d-flex flex-start">
+            <span [ngStyle]="{'borderColor': getColor(task.priority)}" class=" mt-1 complete-task">
+                <i class=" check-icon fa-solid fa-check fa-2xs"></i>
+            </span>
+        </div>
+        <div class=" ms-2 card-body">
           <div class="d-flex justify-content-between">
-            <h6 class="card-title">{{ task.name }}</h6>
-            <div>
+            <div class="fw-500">
+                <p class="card-title">{{ task.name }}</p>
+            </div>
+
+            <div class="">
               <fa-icon
                 (click)="editTask(task)"
                 class=" btn-action me-2"

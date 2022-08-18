@@ -10,11 +10,22 @@ export class TaskComponent implements OnInit, OnDestroy {
   @Input('task')task: any = {};
   showEditForm = false;
 
+  priorityStyle: any = {
+    '1': 'red',
+    '2': 'orange',
+    '3': 'blue',
+    '4': 'gray',
+  }
+
   constructor(private taskService: TaskService) { 
   }
 
+
   ngOnInit(): void {
-    // console.log("task oninit.", this.task);
+  }
+
+  getColor(priority:any){
+    return this.priorityStyle[priority];
   }
 
   editTask(task:any){
@@ -22,7 +33,6 @@ export class TaskComponent implements OnInit, OnDestroy {
   }
 
   deleteTask(task: any){
-    // this.showEditForm = !this.showEditForm;
     this.taskService.delete(task);
   }
 
@@ -30,7 +40,6 @@ export class TaskComponent implements OnInit, OnDestroy {
     this.showEditForm = !this.showEditForm;
   }
   ngOnDestroy(): void {
-    //   console.log("destoryed task", this.task.id )
   }
 
 }
