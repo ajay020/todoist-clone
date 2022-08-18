@@ -26,11 +26,15 @@ export class TaskComponent implements OnInit, OnDestroy {
     // console.log(this.task);
   }
 
-  completeTask(){
+  completeTask(tpl: any){
     this.task.completed = true;
     this.taskService.update(this.task);
 
-    this.toastService.show("1 Task Completed!" , { classname: 'bg-success text-light', delay: 3000 });
+    this.toastService.show(tpl , { classname: 'bg-success text-light', delay: 3000 });
+  }
+
+  undoTask(tpl:any){
+    this.taskService.update({...this.task,completed: false});
   }
 
   getColor(priority:any){

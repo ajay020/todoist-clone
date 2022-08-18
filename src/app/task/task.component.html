@@ -1,8 +1,20 @@
+<ng-template #successTpl>
+    <div class="d-flex justify-content-between ">
+        <p class="p-0 m-0">
+            1 Task completed <span class="ms-2" style="cursor: pointer;"> 
+            <strong (click)="undoTask(successTpl)" > Undo? </strong></span>
+        </p>
+        <!-- <p>
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </p> -->
+    </div>
+</ng-template>
+
 <div>
   <div *ngIf="!showEditForm; else editForm" class="task border d-flex mt-2 p-2">
     <div class="d-flex flex-start">
       <span
-        (click)="completeTask()"
+        (click)="completeTask(successTpl)"
         [ngStyle]="{ borderColor: getColor(task.priority) }"
         class="mt-1 complete-task"
       >
