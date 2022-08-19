@@ -4,6 +4,17 @@
 .task{
     cursor: pointer;
 }
+
+.task p{
+    font-size: small;
+}
+.card-subtitle{
+    font-size: 12px;
+}
+.cart-text{
+    font-size: 10px;
+}
+
 .task:hover .btn-action{
     display: inline-block;
     cursor: pointer;

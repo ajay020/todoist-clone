@@ -11,26 +11,26 @@
 </ng-template>
 
 <div>
-  <div *ngIf="!showEditForm; else editForm" class="task border d-flex mt-2 p-2">
+  <div *ngIf="!showEditForm; else editForm" class="task border-bottom d-flex mt-2 p-2">
     <div class="d-flex flex-start">
       <span
         (click)="completeTask(successTpl)"
         [ngStyle]="{ borderColor: getColor(task.priority) }"
         class="mt-1 complete-task"
       >
-        <i class="check-icon fa-solid fa-check fa-2xs"></i>
+        <i [ngStyle]="{color: getColor(task.priority)}" class="check-icon fa-solid fa-check fa-2xs"></i>
       </span>
     </div>
     <div class="ms-2 card-body">
       <div class="d-flex justify-content-between">
-        <div class="fw-500">
-          <p class="card-title">{{ task.name }}</p>
+        <div class="font-weight-normal">
+          <p class="card-title pb-0 m-0">{{ task.name }}</p>
         </div>
 
-        <div class="">
+        <div class="pb-0">
           <fa-icon
             (click)="editTask(task)"
-            class="btn-action me-2"
+            class="btn-action me-2 "
             size="sm"
             [icon]="['far', 'edit']"
             [styles]="{ color: 'gray' }"
@@ -45,12 +45,12 @@
           ></fa-icon>
         </div>
       </div>
-      <p class="card-subtitle mb-2 text-muted">{{ task.description }}</p>
+      <p class="card-subtitle mb-0 text-muted">{{ task.description }}</p>
       <div class="d-flex justify-content-between">
-        <p class="card-text text-muted border">
+        <p class="card-text text-muted rounded border px-1">
           {{ task.dueDate | date: "EEE, MMM d" }}
         </p>
-        <p class="cart-text text-muted">Personal</p>
+        <!-- <p class="cart-text text-muted text-xsl">Personal</p> -->
       </div>
     </div>
   </div>
