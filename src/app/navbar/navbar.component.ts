@@ -21,6 +21,10 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+  profilePopover(){
+    
+  }
+
   toggleSidebar(){
     this.isSidebarOpen = !this.isSidebarOpen;
     this.navDataService.setSidebarStatus(this.isSidebarOpen);

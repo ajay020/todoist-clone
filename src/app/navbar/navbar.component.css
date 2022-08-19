@@ -4,3 +4,21 @@
 .menu-icon:hover{
     background-color: rgba(0, 0, 0, .2);
 }
+.user-circle{
+    width: 26px;
+    height: 26px;
+    background: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid purple;
+    background-color: black;
+    color: rgb(226, 0, 226);
+    font-size: small;
+}
+.nav-link{
+    cursor: pointer;
+}
+.list-item{
+    cursor: pointer;
+}

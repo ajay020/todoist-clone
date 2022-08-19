@@ -29,10 +29,30 @@
             <i class="fa-solid fa-bell"></i>
         </a>
       </li>
-      <li *ngIf="user" (click)="logout()" class="nav-item">
-        <a  class="nav-link">
-            Logout
+      <li *ngIf="user" class="nav-item me-4">
+        <a placement="bottom"
+         [ngbPopover]="poptemplate" 
+         class="nav-link">
+            <div class="user-circle rounded-circle">
+                {{user.displayName[0]}}
+            </div>
         </a>
+        <ng-template #poptemplate>
+            <div class="d-flex p-0 align-items-center">
+                <div class="user-circle  rounded-circle"> {{user.displayName[0] | uppercase}}</div>
+                <div class="ms-4">
+                    <p class="m-0">{{user.displayName}}</p>
+                    <p class="m-0">{{user.email}}</p>
+                </div>
+            </div>
+            <hr>
+            <ul class="list-group list-group-flush">
+                <li (click)="logout()" class="list-item list-group-item list-group-item-action ">
+                    <i class="fa fa-sign-out"></i>
+                    <span class="ms-4">Logout</span>
+                </li>
+            </ul>
+        </ng-template>
       </li>
     </ul>
   </div>
