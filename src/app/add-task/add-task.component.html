@@ -32,7 +32,7 @@
             <p
              class="priority-popover px-3"
              placement="top"
-             [ngbPopover]="popContent"
+             [ngbPopover]="poptemplate"
              >
                 <i style="color:darkgray" class=" flag-icon fa-solid fa-font-awesome"></i>
             </p>
@@ -47,7 +47,7 @@
             </select>
           </div> -->
         </div>
-        <ng-template #popContent>
+        <ng-template #poptemplate>
           <ul class="list-group pointer">
             <li (click)="selectPriority(1)" class="list-group-item list-group-item-action">
               <i style="color:red" class="fa-solid fa-flag me-2"></i> Priority 1

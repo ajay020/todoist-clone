@@ -10,16 +10,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AddTaskComponent implements OnInit {
   @Input() task :any  = {};
+  @Input('modalRef') modalRef!: any;
+
   @Output('hideAddComponent') hideAddComponent = new EventEmitter();
   @Output('toggleTaskCardDisplay')toggleTaskCardDisplay = new EventEmitter();
 
   dueDate!: string;
   priority: number = 4;
 
-  constructor(private taskService: TaskService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private taskService: TaskService,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    
   }
 
   addTask(newtask: any){
@@ -35,6 +38,7 @@ export class AddTaskComponent implements OnInit {
         newtask.description = newtask.description || '';
         this.taskService.addTask(newtask, projectId);
         this.hideAddComponent.emit(null);
+        this.modalRef.dismiss();
     }else{
         let updatedTask = {
             ...this.task,
@@ -60,6 +64,7 @@ export class AddTaskComponent implements OnInit {
     }else{
         this.toggleTaskCardDisplay.emit(null);
     }
+    this.modalRef.dismiss();
   }
 
 }

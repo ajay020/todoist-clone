@@ -19,7 +19,7 @@
 
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav me-5">
-      <li class="nav-item">
+      <li (click)="openTaskModel(addTask)" class="nav-item">
         <a class="nav-link">
             <i class="fa-solid fa-plus"></i>
         </a>
@@ -57,3 +57,8 @@
     </ul>
   </div>
 </nav>
+<ng-template #addTask>
+    <div class="container p-2">
+        <add-task [modalRef]="modalRef">Add</add-task>
+    </div>
+</ng-template>

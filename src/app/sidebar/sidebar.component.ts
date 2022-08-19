@@ -57,7 +57,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
 
      // get project data from add-project modal
      modalRef.componentInstance.passEntry.subscribe( (canDeleteProject:boolean )=>{
-        console.log(canDeleteProject);
         if(canDeleteProject){
             this.projectService.delete(project.key);
             this.router.navigate(['project'])
