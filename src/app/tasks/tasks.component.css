@@ -1,0 +1,30 @@
+.btn-add-plus {
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  outline: none;
+  background-color: white;
+}
+
+.btn-add-plus span {
+  /* background-color: black; */
+  color: gray;
+  width: 18px;
+  height: 18px;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  font-size: 14px;
+}
+
+.btn-add-plus:hover span {
+  background-color: black;
+  color: white;
+  border: 1px solid gray;
+}

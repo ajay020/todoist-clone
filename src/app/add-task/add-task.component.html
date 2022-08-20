@@ -3,7 +3,7 @@
     <div class="card-body">
       <form #f="ngForm">
         <input
-          class="add-input form-control shadow-none"
+          class="add-input form-control shadow-none p-0"
           [ngModel]="task.name"
           name="name"
           placeholder="Task Name"
@@ -12,13 +12,13 @@
         <input
           [ngModel]="task.description"
           name="description"
-          class="add-input form-control shadow-none"
+          class="add-input form-control shadow-none p-0"
           placeholder="Description"
           [defaultValue]=""
         />
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between pb-0">
           <div class="form-group">
-            <label for="datePicker" class="ml-2"> Select Due Date: </label>
+            <label for="datePicker" class="ml-2 text-muted">Due Date: </label>
             <input
               id="datePicker"
               name="dueDate"
@@ -65,8 +65,7 @@
         </ng-template>
       </form>
     </div>
-    <!-- <p>{{dt.value | date:'EEE, MMM d'}}</p> -->
-    <!-- <p>{{f.value| json}}</p> -->
+ 
   </div>
   <div class="d-flex justify-content-end mt-2">
     <button (click)="cancelTask()" class="btn btn-sm btn-secondary">

@@ -1,18 +1,21 @@
 <div class="container">
-    <h4>{{selectedProjectName}}</h4>
+  <h4>{{ selectedProjectName }}</h4>
   <div *ngFor="let item of items">
     <task [task]="item"></task>
   </div>
-  <p *ngIf="projectCount > 0">
+  <p *ngIf="projectCount" class="mt-1">
     <button
-    (click)="toggle()"
-    *ngIf="displayAddBtn; else displayAddComponent"
-    class="btn btn-sm btn-light"
-  >
-     Add
-  </button>
+      (click)="toggle()"
+      *ngIf="displayAddBtn; else displayAddComponent"
+      class="btn-add-plus text-start text-muted"
+    >
+      <span class="me-2">
+        <i class="fa fa-plus"></i>
+      </span>
+      Add task
+    </button>
   </p>
- 
+
   <ng-template #displayAddComponent>
     <add-task (hideAddComponent)="toggle()">Add</add-task>
   </ng-template>
