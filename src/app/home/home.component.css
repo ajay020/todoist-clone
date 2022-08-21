@@ -1,6 +1,6 @@
 .main{
     width: 60%;
-    /* background-color: aliceblue; */
+    /* background-color:olivedrab; */
     padding-left:48px ;
     padding-top: 24px;
     padding-right: 48px;
@@ -18,4 +18,22 @@
     /* background-color: gray; */
     /* min-width: 380px; */
     transition: all 0.25s 0s ease-out;
+}
+
+@media (width: 280px) {
+    .main{
+        width: 100%;
+        padding-left:2px ;
+        padding-right: 2px;
+        /* background-color: aquamarine; */
+    } 
+}
+
+@media (max-width: 641px){
+    .main{
+        width: 90%;
+        padding-left:28px ;
+        padding-right: 28px;
+        /* background-color: aquamarine; */
+    }
 }
