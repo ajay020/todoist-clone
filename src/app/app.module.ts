@@ -80,7 +80,6 @@ BrowserModule,
         // ],
         canActivate: [AuthGuard], 
       },
-    //   { path: 'project/:id', component: HomeComponent },
       
       { path: '**', component: NotFoundComponent },
     ]),
