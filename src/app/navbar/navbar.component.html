@@ -1,64 +1,60 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div (click)="toggleSidebar()" class="menu-icon mx-4 p-2">
-    <i class="fa-solid fa-bars"></i>
+<nav class="navbar bg-light">
+  <div class="nav-left">
+    <div (click)="toggleSidebar()" class="menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="ps-4">
+        <a class="navbar-brand" routerLink="/home">
+            <i class="fa-solid fa-house"></i>
+          </a>
+    </div>
   </div>
-  <a class="navbar-brand" routerLink="/home"> 
-    <i class="fa-solid fa-house"></i>
-  </a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav me-5">
+  <div class="nav-right">
+    <ul class="navbar-nav">
       <li (click)="openTaskModel(addTask)" class="nav-item">
         <a class="nav-link">
-            <i class="fa-solid fa-plus"></i>
+          <i class="fa-solid fa-plus"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" >
-            <i class="fa-solid fa-bell"></i>
+        <a class="nav-link">
+          <i class="fa-solid fa-bell"></i>
         </a>
       </li>
-      <li *ngIf="user" class="nav-item me-4">
-        <a placement="bottom"
-         [ngbPopover]="poptemplate" 
-         class="nav-link">
-            <div class="user-circle rounded-circle">
-                {{user.displayName[0]}}
-            </div>
+      <li *ngIf="user" class="nav-item ">
+        <a placement="bottom" [ngbPopover]="poptemplate" class="nav-link">
+          <div class="user-circle rounded-circle">
+            {{ user.displayName[0] }}
+          </div>
         </a>
         <ng-template #poptemplate>
-            <div class="d-flex p-0 align-items-center">
-                <div class="user-circle  rounded-circle"> {{user.displayName[0] | uppercase}}</div>
-                <div class="ms-4">
-                    <p class="m-0">{{user.displayName}}</p>
-                    <p class="m-0">{{user.email}}</p>
-                </div>
+          <div class="d-flex p-0 align-items-center">
+            <div class="user-circle rounded-circle">
+              {{ user.displayName[0] | uppercase }}
             </div>
-            <hr>
-            <ul class="list-group list-group-flush">
-                <li (click)="logout()" class="list-item list-group-item list-group-item-action ">
-                    <i class="fa fa-sign-out"></i>
-                    <span class="ms-4">Logout</span>
-                </li>
-            </ul>
+            <div class="ms-4">
+              <p class="m-0">{{ user.displayName }}</p>
+              <p class="m-0">{{ user.email }}</p>
+            </div>
+          </div>
+          <hr />
+          <ul class="list-group list-group-flush">
+            <li
+              (click)="logout()"
+              class="list-item list-group-item list-group-item-action"
+            >
+              <i class="fa fa-sign-out"></i>
+              <span class="ms-4">Logout</span>
+            </li>
+          </ul>
         </ng-template>
       </li>
     </ul>
   </div>
 </nav>
 <ng-template #addTask>
-    <div class="container p-2">
-        <add-task [modalRef]="modalRef">Add</add-task>
-    </div>
+  <div class="container p-2">
+    <add-task [modalRef]="modalRef">Add</add-task>
+  </div>
 </ng-template>
