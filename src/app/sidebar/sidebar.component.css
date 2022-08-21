@@ -9,21 +9,52 @@
     /* left: -350px; */
 }
 .list-group{
-    background-color: #fafafa;
+    padding-left: 28px;
 }
-.list-group li{
+
+.list-group li:hover{
+    background-color: rgb(240, 240, 240);
+}
+.list-group-item {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    border: none;
+    /* padding-left: 28px; */
+    background-color: #fafafa;
+    /* text-align: center; */
+    /* justify-content: space-between; */
 }
+
+.sublist-header{
+    padding-left: 38px;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
 .list-ellipsis{
     /* background-color: burlywood; */
     display: none;
+    opacity: 0.5;
+    transition: all 0.3s 0s ease-out;
 }
  .list-group li:hover .list-ellipsis{
     display: inline-block;
+    opacity: 0.9;
 }
 
 .elps-icon:hover{
     color: black;
 } 
+
+.dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: inline-block;
+   vertical-align:middle;
+}

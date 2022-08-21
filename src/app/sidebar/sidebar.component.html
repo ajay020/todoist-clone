@@ -4,43 +4,49 @@
     <li class="list-group-item list-group-item-action">Today</li>
     <li class="list-group-item list-group-item-action">Incoming</li>
     <li class="list-group-item list-group-item-action">Filters & Labels</li>
-    <li class="list-group-item d-flex justify-content-between p-0">
-      <p (click)="toggleList()" class="list-header flex-fill p-2 m-0">
-        <i *ngIf="isListExpended" class="fa-solid fa-angle-down me-4"></i>
-        <i *ngIf="!isListExpended" class="fa-solid fa-angle-right me-4"></i>
-        <span>Projects</span>
-      </p>
-      <span (click)="openModel()" class="mr-auto bg-light p-2">
-        <i class="fa-solid fa-plus"></i>
-      </span>
-    </li>
-    <ul *ngIf="isListExpended" class="list-group">
-      <li
-        *ngFor="let project of projects"
-        class="list-group-item list-group-item-action border-0 p-0 mt-2"
-        (click)="selectProject(project)"
+  </ul>
+  <div class="sublist-header">
+    <p (click)="toggleList()" class="flex-fill p-0 m-0">
+      <i *ngIf="isListExpended" class="fa-solid fa-angle-down pe-2"></i>
+      <i *ngIf="!isListExpended" class="fa-solid fa-angle-right pe-2"></i>
+      <span>Projects</span>
+    </p>
+    <span (click)="openModel()" class="mr-auto bg-light p-2">
+      <i class="fa-solid fa-plus"></i>
+    </span>
+  </div>
+  <ul *ngIf="isListExpended" class="list-group">
+    <li
+      *ngFor="let project of projects"
+      class="list-group-item list-group-item-action"
+      (click)="selectProject(project)"
+    >
+      <a
+        routerLink="/project"
+        [queryParams]="{ id: project.key }"
+        class=" nav-link flex-fill "
       >
-        <a
-          routerLink="/project"
-          [queryParams]="{ id: project.key }"
-          class="nav-link flex-fill py-2"
-        >
-          {{ project.name }}</a
-        >
-        <span
-            placement="top"
-            [ngbPopover]="poptemplate"
-            class="list-ellipsis mx-2 bg-light">
-          <i class="fa-solid fa-ellipsis elps-icon"></i>
-        </span>
-        <ng-template #poptemplate>
-            <div class="">
-                <button class=" btn-block btn btn-sm bg-light">Edit</button>
-                <button (click)="openDeleteModal(project)" class="  btn-block btn btn-sm btn-outline-danger">Delete</button>
-            </div>
-        </ng-template>
-      </li>
-    </ul>
+        <span class="dot rounded-cornder p-1"></span>
+        {{ project.name }}
+      </a>
+      <span
+        placement="top"
+        [ngbPopover]="poptemplate"
+        class="list-ellipsis"
+      >
+        <i class="fa-solid fa-ellipsis elps-icon"></i>
+      </span>
+      <ng-template #poptemplate>
+        <div class="">
+          <button class="btn-block btn btn-sm bg-light">Edit</button>
+          <button
+            (click)="openDeleteModal(project)"
+            class="btn-block btn btn-sm btn-outline-danger"
+          >
+            Delete
+          </button>
+        </div>
+      </ng-template>
+    </li>
   </ul>
 </div>
-
