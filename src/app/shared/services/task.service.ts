@@ -45,7 +45,6 @@ export class TaskService {
   }
 
   addTask(task: any, projectId: any) {
-    console.log(task);
     
     const uid = this.authService.userId;
     task.user_id = uid;
@@ -56,13 +55,11 @@ export class TaskService {
   }
 
   update(task: any) {
-    console.log(task);
     return this.firestore.collection('items/'+ task.user_id +"/userItems/")
         .doc(task.key).set(task);
   }
 
   delete(task: any) {
-    // console.log(task);
     this.firestore.collection('items/'+ task.user_id +"/userItems/")
     .doc(task.key).delete();
   }

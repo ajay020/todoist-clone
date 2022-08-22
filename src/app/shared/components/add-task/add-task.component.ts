@@ -38,7 +38,7 @@ export class AddTaskComponent implements OnInit {
         newtask.description = newtask.description || '';
         this.taskService.addTask(newtask, projectId);
         this.hideAddComponent.emit(null);
-        this.modalRef.dismiss();
+        this.modalRef?.dismiss();
     }else{
         let updatedTask = {
             ...this.task,
