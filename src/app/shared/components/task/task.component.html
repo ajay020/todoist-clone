@@ -4,9 +4,6 @@
             1 Task completed <span class="ms-2" style="cursor: pointer;"> 
             <strong (click)="undoTask(successTpl)" > Undo? </strong></span>
         </p>
-        <!-- <p>
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </p> -->
     </div>
 </ng-template>
 
@@ -50,7 +47,6 @@
         <p class="card-text text-muted rounded border px-1">
           {{ task.dueDate | date: "EEE, MMM d" }}
         </p>
-        <!-- <p class="cart-text text-muted text-xsl">Personal</p> -->
       </div>
     </div>
   </div>

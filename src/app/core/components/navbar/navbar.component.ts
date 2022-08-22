@@ -1,8 +1,8 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { NavdataService } from './../navdata.service';
-import { AuthService } from './../auth.service';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddTaskComponent } from './../add-task/add-task.component';
+
+import { AuthService } from '../../../shared/services/auth.service';
+import { NavdataService } from '../../services/navdata.service';
 
 @Component({
   selector: 'navbar',

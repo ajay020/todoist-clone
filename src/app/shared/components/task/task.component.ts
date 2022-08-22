@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { TaskService } from './../task.service';
-import { ToastService } from './../toast.service';
+import { TaskService } from 'shared/services/task.service';
+import { ToastService } from 'shared/services/toast.service';
 
 @Component({
   selector: 'task',

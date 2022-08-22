@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription, switchMap } from 'rxjs';
-import { NavdataService } from './../navdata.service';
-import { TaskService } from './../task.service';
-import { ProjectService } from './../project.service';
+import { ProjectService } from 'shared/services/project.service';
+import { NavdataService } from '../../services/navdata.service';
+import { TaskService } from '../../../shared/services/task.service';
 
 @Component({
   selector: 'home',

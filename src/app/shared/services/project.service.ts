@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { AuthService } from './auth.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Item } from './models/item';
-import { map, of, pipe, switchMap } from 'rxjs';
-import { TaskService } from './task.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { map } from 'rxjs';
+import { AuthService } from 'shared/services/auth.service';
+
 
 @Injectable({
   providedIn: 'root'

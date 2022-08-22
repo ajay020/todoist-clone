@@ -1,11 +1,11 @@
 import { Component, Input, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
-import { NavdataService } from './../navdata.service';
+import { NavdataService } from '../../services/navdata.service';
 import { Subscription, Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddProjectComponent } from './../add-project/add-project.component';
-import { ProjectService } from './../project.service';
-import { DeleteProjectComponent } from '../delete-project/delete-project.component';
 import { Router } from '@angular/router';
+import { ProjectService } from 'shared/services/project.service';
+import { AddProjectComponent } from 'app/project/components/add-project/add-project.component';
+import { DeleteProjectComponent } from 'app/project/components/delete-project/delete-project.component';
 
 @Component({
   selector: 'sidebar',

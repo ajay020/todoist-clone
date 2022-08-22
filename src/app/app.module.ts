@@ -6,64 +6,39 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import {
-  FaIconLibrary,
-  FontAwesomeModule,
-} from '@fortawesome/angular-fontawesome';
-import {
-  faBarChart,
-  faEdit,
-  faTrashCan,
-} from '@fortawesome/free-regular-svg-icons';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faBarChart, faEdit, faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { AuthGuard } from 'shared/services/auth-guard.service';
 
 import { environment } from './../environments/environment';
-import { AddTaskComponent } from './add-task/add-task.component';
 import { AppComponent } from './app.component';
-import { AuthService } from './auth.service';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { SignupComponent } from './signup/signup.component';
-import { TaskService } from './task.service';
-import { TaskComponent } from './task/task.component';
-import { TasksComponent } from './tasks/tasks.component';
-import { AuthGuard } from './auth.guard';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AddProjectComponent } from './add-project/add-project.component';
-import { CommonModule, DatePipe } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DeleteProjectComponent } from './delete-project/delete-project.component';
-import { ToastService } from './toast.service';
-import { ToastsContainer } from './toast-container/toast-container.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { LoginComponent } from './core/components/login/login.component';
+import { NotFoundComponent } from './core/components/not-found/not-found.component';
+import { SignupComponent } from './core/components/signup/signup.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
+
+import { DatePipe } from '@angular/common';
+import { ProjectModule } from './project/project.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    TaskComponent,
-    TasksComponent,
-    AddTaskComponent,
-    SidebarComponent,
-    HomeComponent,
-    LoginComponent,
-    SignupComponent,
-    AddProjectComponent,
-    DeleteProjectComponent,
-    ToastsContainer,
   ],
   imports: [
-BrowserModule,
-    CommonModule,
-    FormsModule,
-    FontAwesomeModule,
+    BrowserModule,
+    SharedModule,
+    CoreModule,
+    ProjectModule,
+    
+    // firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule, // storage
-    NgbModule,
 
 
     RouterModule.forRoot([
@@ -85,10 +60,7 @@ BrowserModule,
     ]),
   ],
   providers: [
-    TaskService,
-    AuthService,
-    DatePipe,
-    ToastService
+        DatePipe
     ],
   bootstrap: [AppComponent],
 })

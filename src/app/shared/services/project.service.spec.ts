@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ProjectService } from './project.service';
+import { ProjectService } from '../../../shared/services/app/project.service';
 
 describe('ProjectService', () => {
   let service: ProjectService;

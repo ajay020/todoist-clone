@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { map, of, switchMap } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { ProjectService } from './project.service';
+import { map } from 'rxjs';
+
 import { AuthService } from './auth.service';
+import { ProjectService } from './project.service';
 
 @Injectable({
   providedIn: 'root',

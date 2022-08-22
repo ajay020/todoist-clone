@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { TaskService } from './../task.service';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectService } from './../project.service';
+import { ProjectService } from 'shared/services/project.service';
 
 @Component({
   selector: 'tasks',

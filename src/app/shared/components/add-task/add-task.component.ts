@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { TaskService } from './../task.service';
+import { TaskService } from 'shared/services/task.service';
 import { ActivatedRoute } from '@angular/router';
 
 
