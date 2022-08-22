@@ -74,3 +74,11 @@
     display: inline-block;
    vertical-align:middle;
 }
+
+@media (max-width:641px) {
+    .sidebar{
+        left: -320px;
+        /* display:none; */
+        /* background-color: aquamarine; */
+    }
+}

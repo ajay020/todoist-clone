@@ -8,6 +8,7 @@ import { AuthService } from '../../../shared/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+    isLoading = false;
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   async login(formData: any){
+    this.isLoading = true;
     this.auth.login(formData)
   }
 }

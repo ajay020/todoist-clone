@@ -7,6 +7,7 @@ import { AuthService } from '../../../shared/services/auth.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+    isLoading= false;
 
   constructor(private authService: AuthService) { }
 
@@ -14,6 +15,7 @@ export class SignupComponent implements OnInit {
   }
 
   signup(formData: any){
+    this.isLoading = true;
     this.authService.signup(formData);
   }
 

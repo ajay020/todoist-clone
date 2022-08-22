@@ -1,4 +1,9 @@
 <div class="container card mt-4" style="width: 30rem;" >
+    <div *ngIf="isLoading" class="text-center pt-4">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+    </div>
   <form class="p-4" #f="ngForm" (ngSubmit)="login(f.value)">
     <h1>Login</h1>
     <div class="form-group">

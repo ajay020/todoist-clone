@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, EventEmitter, Output, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { NavdataService } from '../../services/navdata.service';
 import { Subscription, Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -12,13 +12,14 @@ import { DeleteProjectComponent } from 'app/project/components/delete-project/de
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
 })
-export class SidebarComponent implements OnInit, OnDestroy {
+export class SidebarComponent implements OnInit,  OnDestroy {
+    @Output('onSelectProject') onSelectProject = new EventEmitter();
   isListExpended = false;
+  leftPosition!:string;
   sidebarStatus! : boolean;
   subscription!: Subscription;
   projectSubscription! : Subscription;
   projects!: any[];  
-  @Output('onSelectProject') onSelectProject = new EventEmitter();
 
   constructor(
     private projectService: ProjectService,
@@ -29,14 +30,26 @@ export class SidebarComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription = this.dataService.sidebarStatus$.subscribe(status =>{
         this.sidebarStatus = status;
+        this.leftPosition  = status ? '0' : '-320px';
     })
 
     this.projectSubscription =  this.projectService.getAllProjects()
         .subscribe(data => {
             this.projects = data 
-            // console.log(this.projects)
         });
   }
+
+ onResize(event:any){
+    // const width = event.target.innerWidth;
+    // if(width < 700){
+    //     if(this.sidebarStatus){
+    //         this.sidebarStatus = false;
+    //         // this.leftPosition  =  '-320px';
+    //     }
+       
+    // }
+ }
+
 
   selectProject(project:any){
     this.onSelectProject.emit(project.name);
