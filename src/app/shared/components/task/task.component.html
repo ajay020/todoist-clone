@@ -1,8 +1,10 @@
 <ng-template #successTpl>
     <div class="d-flex justify-content-between ">
         <p class="p-0 m-0">
-            1 Task completed <span class="ms-2" style="cursor: pointer;"> 
-            <strong (click)="undoTask(successTpl)" > Undo? </strong></span>
+            1 Task completed 
+            <span class="ms-2" style="cursor: pointer;"> 
+                <strong class="text-warning" (click)="undoTask(successTpl)" > Undo? </strong>
+            </span>
         </p>
     </div>
 </ng-template>
