@@ -1,5 +1,5 @@
 <div class="container">
-  <h4>{{ selectedProjectName }}</h4>
+  <h4>{{ selectedProjectName.charAt(0).toUpperCase() + selectedProjectName.slice(1) }}</h4>
   <div *ngFor="let item of items">
     <task [task]="item"></task>
   </div>
