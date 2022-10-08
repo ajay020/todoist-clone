@@ -1,9 +1,9 @@
-<div class="sidebar" (window:resize)="onResize($event)" [ngStyle]="{ left: sidebarStatus ? '0' : '-320px' }">
+<div class="sidebar" [ngStyle]="{ left: sidebarStatus ? '0' : '-320px' }">
   <ul class="list-group">
-    <li class="list-group-item list-group-item-action">Inbox</li>
-    <li class="list-group-item list-group-item-action">Today</li>
-    <li class="list-group-item list-group-item-action">Incoming</li>
-    <li class="list-group-item list-group-item-action">Filters & Labels</li>
+    <li class="list-group-item list-group-item-action" (click)="setQueryParams('inbox')">Inbox</li>
+    <li class="list-group-item list-group-item-action"  (click)="setQueryParams('today')">Today</li>
+    <li class="list-group-item list-group-item-action" (click)="setQueryParams('incoming')">Incoming</li>
+    <!-- <li class="list-group-item list-group-item-action">Filters & Labels</li> -->
   </ul>
   <div class="sublist-header">
     <p (click)="toggleList()" class="flex-fill p-0 m-0">

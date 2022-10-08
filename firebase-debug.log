@@ -1,0 +1,259 @@
+[debug] [2022-08-23T04:44:18.255Z] ----------------------------------------------------------------------
+[debug] [2022-08-23T04:44:18.262Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ajay\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-08-23T04:44:18.263Z] CLI Version:   9.18.0
+[debug] [2022-08-23T04:44:18.264Z] Platform:      win32
+[debug] [2022-08-23T04:44:18.264Z] Node Version:  v16.13.0
+[debug] [2022-08-23T04:44:18.267Z] Time:          Tue Aug 23 2022 10:14:18 GMT+0530 (India Standard Time)
+[debug] [2022-08-23T04:44:18.267Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-23T04:44:18.293Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-23T04:44:18.294Z] > authorizing via signed-in user (ajayjarwal44@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Angular_Projects\ng-task-manager
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-08-23T04:46:25.094Z] > refreshing access token with scopes: []
+[debug] [2022-08-23T04:46:25.096Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-08-23T04:46:25.644Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Tue, 23 Aug 2022 04:46:27 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:46:25.735Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2022-08-23T04:46:27.123Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2022-08-23T04:46:27.124Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2022-08-23T04:47:19.676Z] ----------------------------------------------------------------------
+[debug] [2022-08-23T04:47:19.683Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ajay\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-08-23T04:47:19.684Z] CLI Version:   9.18.0
+[debug] [2022-08-23T04:47:19.685Z] Platform:      win32
+[debug] [2022-08-23T04:47:19.685Z] Node Version:  v16.13.0
+[debug] [2022-08-23T04:47:19.687Z] Time:          Tue Aug 23 2022 10:17:19 GMT+0530 (India Standard Time)
+[debug] [2022-08-23T04:47:19.688Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-23T04:47:19.710Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-23T04:47:19.711Z] > authorizing via signed-in user (ajayjarwal44@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Angular_Projects\ng-task-manager
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-08-23T04:47:39.429Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2022-08-23T04:47:40.799Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2022-08-23T04:47:40.799Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2022-08-23T04:48:39.498Z] ----------------------------------------------------------------------
+[debug] [2022-08-23T04:48:39.504Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ajay\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-08-23T04:48:39.506Z] CLI Version:   9.18.0
+[debug] [2022-08-23T04:48:39.506Z] Platform:      win32
+[debug] [2022-08-23T04:48:39.507Z] Node Version:  v16.13.0
+[debug] [2022-08-23T04:48:39.509Z] Time:          Tue Aug 23 2022 10:18:39 GMT+0530 (India Standard Time)
+[debug] [2022-08-23T04:48:39.510Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-23T04:48:39.531Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-23T04:48:39.532Z] > authorizing via signed-in user (ajayjarwal44@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Angular_Projects\ng-task-manager
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-08-23T04:49:47.301Z] ----------------------------------------------------------------------
+[debug] [2022-08-23T04:49:47.308Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ajay\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-08-23T04:49:47.310Z] CLI Version:   9.18.0
+[debug] [2022-08-23T04:49:47.310Z] Platform:      win32
+[debug] [2022-08-23T04:49:47.311Z] Node Version:  v16.13.0
+[debug] [2022-08-23T04:49:47.312Z] Time:          Tue Aug 23 2022 10:19:47 GMT+0530 (India Standard Time)
+[debug] [2022-08-23T04:49:47.313Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-23T04:49:47.335Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-23T04:49:47.336Z] > authorizing via signed-in user (ajayjarwal44@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Angular_Projects\ng-task-manager
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-08-23T04:50:14.140Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2022-08-23T04:50:15.685Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2022-08-23T04:50:15.686Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2022-08-23T04:50:35.340Z] ----------------------------------------------------------------------
+[debug] [2022-08-23T04:50:35.346Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ajay\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-08-23T04:50:35.348Z] CLI Version:   9.18.0
+[debug] [2022-08-23T04:50:35.348Z] Platform:      win32
+[debug] [2022-08-23T04:50:35.349Z] Node Version:  v16.13.0
+[debug] [2022-08-23T04:50:35.351Z] Time:          Tue Aug 23 2022 10:20:35 GMT+0530 (India Standard Time)
+[debug] [2022-08-23T04:50:35.352Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-23T04:50:35.373Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-23T04:50:35.374Z] > authorizing via signed-in user (ajayjarwal44@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Angular_Projects\ng-task-manager
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-08-23T04:50:56.009Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-08-23T04:50:57.207Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-08-23T04:50:57.208Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project task-manager-fc7e8 (task-manager) 
+[info] 
+=== Firestore Setup
+[debug] [2022-08-23T04:51:01.394Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-08-23T04:51:01.395Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-08-23T04:51:01.885Z] <<< HTTP RESPONSE 200 {"date":"Tue, 23 Aug 2022 04:51:03 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:51:01.963Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/task-manager-fc7e8/services/firestore.googleapis.com  
+ 
+[debug] [2022-08-23T04:51:04.303Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:51:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:51:04.305Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/task-manager-fc7e8  
+ 
+[debug] [2022-08-23T04:51:05.494Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:51:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:51:05.495Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-08-23T04:51:05.497Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-23T04:51:05.498Z] > authorizing via signed-in user (ajayjarwal44@gmail.com)
+[debug] [2022-08-23T04:51:05.498Z] [iam] checking project task-manager-fc7e8 for permissions ["firebase.projects.get"]
+[debug] [2022-08-23T04:51:05.500Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-manager-fc7e8:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2022-08-23T04:51:07.413Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:51:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1471","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-08-23T04:52:31.782Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/task-manager-fc7e8/releases?pageSize=10&pageToken=  
+ 
+[debug] [2022-08-23T04:52:33.946Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:52:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:52:33.949Z] Found ruleset: projects/task-manager-fc7e8/rulesets/b59eb171-5244-4353-b00c-f65b92dfbfcd
+[debug] [2022-08-23T04:52:33.950Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/task-manager-fc7e8/rulesets/b59eb171-5244-4353-b00c-f65b92dfbfcd  
+ 
+[debug] [2022-08-23T04:52:35.851Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:52:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-08-23T04:53:16.417Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/task-manager-fc7e8/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2022-08-23T04:53:16.418Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/task-manager-fc7e8/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2022-08-23T04:53:19.055Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:53:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:53:19.059Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:53:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at E:\Angular_Projects\ng-task-manager 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=328291349&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-08-23T04:53:20.494Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"a9e986b78988410a1159","redirect_uri":"http://localhost:9005","state":"328291349"}
+[debug] [2022-08-23T04:53:21.106Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Tue, 23 Aug 2022 04:53:23 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"bd939884543465667bef41632c95ee19\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events *.actions.githubusercontent.com wss://*.actions.githubusercontent.com online.visualstudio.com/api/v1/locations github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"C3B4:377A:58A20:82F0B:63045D42"}
+[debug] [2022-08-23T04:53:21.124Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-08-23T04:53:21.942Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-08-23T04:53:21.943Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ajay020","id":38433901,"node_id":"MDQ6VXNlcjM4NDMzOTAx","avatar_url":"https://avatars.githubusercontent.com/u/38433901?v=4","gravatar_id":"","url":"https://api.github.com/users/ajay020","html_url":"https://github.com/ajay020","followers_url":"https://api.github.com/users/ajay020/followers","following_url":"https://api.github.com/users/ajay020/following{/other_user}","gists_url":"https://api.github.com/users/ajay020/gists{/gist_id}","starred_url":"https://api.github.com/users/ajay020/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ajay020/subscriptions","organizations_url":"https://api.github.com/users/ajay020/orgs","repos_url":"https://api.github.com/users/ajay020/repos","events_url":"https://api.github.com/users/ajay020/events{/privacy}","received_events_url":"https://api.github.com/users/ajay020/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":41,"public_gists":0,"followers":1,"following":24,"created_at":"2018-04-16T15:23:47Z","updated_at":"2022-08-21T13:39:50Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":68156,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as ajay020 
+[info] 
+[debug] [2022-08-23T04:54:32.037Z] >>> [apiv2][query] GET https://api.github.com/repos/ajay020/todoist-clone /actions/secrets/public-key type=owner
+[debug] [2022-08-23T04:54:32.568Z] <<< [apiv2][status] GET https://api.github.com/repos/ajay020/todoist-clone /actions/secrets/public-key 404
+[debug] [2022-08-23T04:54:32.568Z] <<< [apiv2][body] GET https://api.github.com/repos/ajay020/todoist-clone /actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-08-23T04:54:46.896Z] >>> [apiv2][query] GET https://api.github.com/repos/ajay020/todoist-clone/actions/secrets/public-key type=owner
+[debug] [2022-08-23T04:54:47.703Z] <<< [apiv2][status] GET https://api.github.com/repos/ajay020/todoist-clone/actions/secrets/public-key 200
+[debug] [2022-08-23T04:54:47.703Z] <<< [apiv2][body] GET https://api.github.com/repos/ajay020/todoist-clone/actions/secrets/public-key {"key_id":"568250167242549743","key":"qbvKldmDIlJzpsjK+d3p2XZCdLxlj63Yi0dJ4qAzoTs="}
+[debug] [2022-08-23T04:54:47.711Z] >>> [apiv2][query] GET https://api.github.com/repos/ajay020/todoist-clone [none]
+[debug] [2022-08-23T04:54:48.340Z] <<< [apiv2][status] GET https://api.github.com/repos/ajay020/todoist-clone 200
+[debug] [2022-08-23T04:54:48.340Z] <<< [apiv2][body] GET https://api.github.com/repos/ajay020/todoist-clone {"id":523597048,"node_id":"R_kgDOHzV0-A","name":"todoist-clone","full_name":"ajay020/todoist-clone","private":false,"owner":{"login":"ajay020","id":38433901,"node_id":"MDQ6VXNlcjM4NDMzOTAx","avatar_url":"https://avatars.githubusercontent.com/u/38433901?v=4","gravatar_id":"","url":"https://api.github.com/users/ajay020","html_url":"https://github.com/ajay020","followers_url":"https://api.github.com/users/ajay020/followers","following_url":"https://api.github.com/users/ajay020/following{/other_user}","gists_url":"https://api.github.com/users/ajay020/gists{/gist_id}","starred_url":"https://api.github.com/users/ajay020/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ajay020/subscriptions","organizations_url":"https://api.github.com/users/ajay020/orgs","repos_url":"https://api.github.com/users/ajay020/repos","events_url":"https://api.github.com/users/ajay020/events{/privacy}","received_events_url":"https://api.github.com/users/ajay020/received_events","type":"User","site_admin":false},"html_url":"https://github.com/ajay020/todoist-clone","description":null,"fork":false,"url":"https://api.github.com/repos/ajay020/todoist-clone","forks_url":"https://api.github.com/repos/ajay020/todoist-clone/forks","keys_url":"https://api.github.com/repos/ajay020/todoist-clone/keys{/key_id}","collaborators_url":"https://api.github.com/repos/ajay020/todoist-clone/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/ajay020/todoist-clone/teams","hooks_url":"https://api.github.com/repos/ajay020/todoist-clone/hooks","issue_events_url":"https://api.github.com/repos/ajay020/todoist-clone/issues/events{/number}","events_url":"https://api.github.com/repos/ajay020/todoist-clone/events","assignees_url":"https://api.github.com/repos/ajay020/todoist-clone/assignees{/user}","branches_url":"https://api.github.com/repos/ajay020/todoist-clone/branches{/branch}","tags_url":"https://api.github.com/repos/ajay020/todoist-clone/tags","blobs_url":"https://api.github.com/repos/ajay020/todoist-clone/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/ajay020/todoist-clone/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/ajay020/todoist-clone/git/refs{/sha}","trees_url":"https://api.github.com/repos/ajay020/todoist-clone/git/trees{/sha}","statuses_url":"https://api.github.com/repos/ajay020/todoist-clone/statuses/{sha}","languages_url":"https://api.github.com/repos/ajay020/todoist-clone/languages","stargazers_url":"https://api.github.com/repos/ajay020/todoist-clone/stargazers","contributors_url":"https://api.github.com/repos/ajay020/todoist-clone/contributors","subscribers_url":"https://api.github.com/repos/ajay020/todoist-clone/subscribers","subscription_url":"https://api.github.com/repos/ajay020/todoist-clone/subscription","commits_url":"https://api.github.com/repos/ajay020/todoist-clone/commits{/sha}","git_commits_url":"https://api.github.com/repos/ajay020/todoist-clone/git/commits{/sha}","comments_url":"https://api.github.com/repos/ajay020/todoist-clone/comments{/number}","issue_comment_url":"https://api.github.com/repos/ajay020/todoist-clone/issues/comments{/number}","contents_url":"https://api.github.com/repos/ajay020/todoist-clone/contents/{+path}","compare_url":"https://api.github.com/repos/ajay020/todoist-clone/compare/{base}...{head}","merges_url":"https://api.github.com/repos/ajay020/todoist-clone/merges","archive_url":"https://api.github.com/repos/ajay020/todoist-clone/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/ajay020/todoist-clone/downloads","issues_url":"https://api.github.com/repos/ajay020/todoist-clone/issues{/number}","pulls_url":"https://api.github.com/repos/ajay020/todoist-clone/pulls{/number}","milestones_url":"https://api.github.com/repos/ajay020/todoist-clone/milestones{/number}","notifications_url":"https://api.github.com/repos/ajay020/todoist-clone/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/ajay020/todoist-clone/labels{/name}","releases_url":"https://api.github.com/repos/ajay020/todoist-clone/releases{/id}","deployments_url":"https://api.github.com/repos/ajay020/todoist-clone/deployments","created_at":"2022-08-11T05:30:07Z","updated_at":"2022-08-11T05:30:46Z","pushed_at":"2022-08-22T10:05:13Z","git_url":"git://github.com/ajay020/todoist-clone.git","ssh_url":"git@github.com:ajay020/todoist-clone.git","clone_url":"https://github.com/ajay020/todoist-clone.git","svn_url":"https://github.com/ajay020/todoist-clone","homepage":null,"size":850,"stargazers_count":0,"watchers_count":0,"language":"TypeScript","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","network_count":0,"subscribers_count":1}
+[debug] [2022-08-23T04:54:48.349Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/task-manager-fc7e8/serviceAccounts  
+ {"accountId":"github-action-523597048","serviceAccount":{"displayName":"GitHub Actions (ajay020/todoist-clone)","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository ajay020/todoist-clone"}}
+[debug] [2022-08-23T04:54:51.195Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:54:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:54:51.197Z] >>> HTTP REQUEST GET https://iam.googleapis.com/v1/projects/task-manager-fc7e8/serviceAccounts/github-action-523597048@task-manager-fc7e8.iam.gserviceaccount.com  
+ 
+[debug] [2022-08-23T04:54:51.199Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-manager-fc7e8:getIamPolicy  
+ 
+[debug] [2022-08-23T04:54:53.114Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:54:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:54:53.117Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:54:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1537","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:54:53.119Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-manager-fc7e8:setIamPolicy  
+ {"policy":{"version":1,"etag":"BwXmF8S+zeI=","bindings":[{"role":"roles/editor","members":["serviceAccount:task-manager-fc7e8@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-wcacx@task-manager-fc7e8.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:firebase-adminsdk-wcacx@task-manager-fc7e8.iam.gserviceaccount.com","serviceAccount:github-action-523597048@task-manager-fc7e8.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-164770910439@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-164770910439@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-wcacx@task-manager-fc7e8.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:ajayjarwal44@gmail.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-164770910439@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-523597048@task-manager-fc7e8.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-523597048@task-manager-fc7e8.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-523597048@task-manager-fc7e8.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2022-08-23T04:54:55.738Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:54:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=2278","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-08-23T04:54:55.739Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/task-manager-fc7e8/serviceAccounts/github-action-523597048@task-manager-fc7e8.iam.gserviceaccount.com/keys  
+ {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2022-08-23T04:54:58.233Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 23 Aug 2022 04:54:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] +  Created service account github-action-523597048 with Firebase Hosting admin permissions. 
+[debug] [2022-08-23T04:54:58.333Z] >>> [apiv2][query] PUT https://api.github.com/repos/ajay020/todoist-clone/actions/secrets/FIREBASE_SERVICE_ACCOUNT_TASK_MANAGER_FC7E8 [none]
+[debug] [2022-08-23T04:54:58.333Z] >>> [apiv2][body] PUT https://api.github.com/repos/ajay020/todoist-clone/actions/secrets/FIREBASE_SERVICE_ACCOUNT_TASK_MANAGER_FC7E8 {"encrypted_value":"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","key_id":"568250167242549743"}
+[debug] [2022-08-23T04:54:59.067Z] <<< [apiv2][status] PUT https://api.github.com/repos/ajay020/todoist-clone/actions/secrets/FIREBASE_SERVICE_ACCOUNT_TASK_MANAGER_FC7E8 201
+[debug] [2022-08-23T04:54:59.068Z] <<< [apiv2][body] PUT https://api.github.com/repos/ajay020/todoist-clone/actions/secrets/FIREBASE_SERVICE_ACCOUNT_TASK_MANAGER_FC7E8 {}
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_TASK_MANAGER_FC7E8. 
+[info] i  You can manage your secrets at https://github.com/ajay020/todoist-clone/settings/secrets. 
+[info] 
+[debug] [2022-08-23T04:54:59.609Z] TypeError: Cannot read properties of undefined (reading 'predeploy')
+    at Object.initGitHub [as hosting:github] (C:\Users\ajay\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\github.js:65:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async init (C:\Users\ajay\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.

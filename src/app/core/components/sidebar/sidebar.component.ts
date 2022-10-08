@@ -2,7 +2,7 @@ import { Component, Input, OnInit, OnDestroy, EventEmitter, Output, AfterViewIni
 import { NavdataService } from '../../services/navdata.service';
 import { Subscription, Observable } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ProjectService } from 'shared/services/project.service';
 import { AddProjectComponent } from 'app/project/components/add-project/add-project.component';
 import { DeleteProjectComponent } from 'app/project/components/delete-project/delete-project.component';
@@ -25,6 +25,7 @@ export class SidebarComponent implements OnInit,  OnDestroy {
     private projectService: ProjectService,
     private dataService: NavdataService,
     private router: Router,
+    private activeRoute: ActivatedRoute,
     private modalService: NgbModal) {}
 
   ngOnInit(): void {
@@ -39,17 +40,15 @@ export class SidebarComponent implements OnInit,  OnDestroy {
         });
   }
 
- onResize(event:any){
-    // const width = event.target.innerWidth;
-    // if(width < 700){
-    //     if(this.sidebarStatus){
-    //         this.sidebarStatus = false;
-    //         // this.leftPosition  =  '-320px';
-    //     }
-       
-    // }
+ setQueryParams(name:string){
+    this.router.navigate(
+            [],
+            {
+                relativeTo: this.activeRoute,
+                queryParams: {name},
+                // queryParamsHandling: 'merge'
+            });
  }
-
 
   selectProject(project:any){
     this.onSelectProject.emit(project.name);

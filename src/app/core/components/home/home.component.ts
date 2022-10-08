@@ -35,21 +35,60 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.taskService.getAllTasks().subscribe(result =>{
         this.items = result.filter(task => task.completed === false);
-        // console.log("changed collec");
         this.filterItems(); // gets called every time task list modified.
     })
 
     this.taskSubscription = this.activeRoute.queryParams.pipe()
     .subscribe( (params: Params) =>{
         this.projectId = params['id'];
-        this.filterItems()
+        // filter by project id
+        if(this.projectId){
+            this.filterItems()
+        }
+        if(params['name']){
+            console.log(params['name']);
+            this.filterItemsBy(params['name']);
+        }
     })
   }
 
+  filterItemsBy(title:string){
+    if(title === 'today'){
+        this.setProjectName(title);
+
+        this.filteredItems = this.items.filter(item => { 
+          return new Date().getFullYear() === new Date(item.dueDate).getFullYear()
+          && new Date().getDate() === new Date(item.dueDate).getDate()
+          && new Date().getMonth() === new Date(item.dueDate).getMonth();
+        })
+    }
+    else if(title === 'incoming'){
+        this.setProjectName(title);
+        this.filteredItems = this.items.filter(item => { 
+            return new Date().getTime() < new Date(item.dueDate).getTime();
+          })
+          console.log(this.filteredItems);
+
+    } else if(title === 'inbox'){
+        this.setProjectName(title);
+        this.filteredItems = this.items;
+    }else{
+        this.filteredItems = this.items;
+    }
+  }
+
   filterItems(){
-    this.filteredItems = this.projectId 
-    ?this.items.filter(item => item.project_id === this.projectId)
-    : this.items;
+
+    let title = this.activeRoute.snapshot.queryParams['name'];
+    if(title){
+        this.filterItemsBy(title);
+    }else{
+        this.filteredItems = this.projectId 
+        ?this.items.filter(item => item.project_id === this.projectId)
+        : this.items;
+    }
+
+   
   }
 
   setProjectName(projectName:string){
