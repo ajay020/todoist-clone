@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../shared/services/auth.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { catchError, tap } from 'rxjs';
+
 
 @Component({
   selector: 'login',
@@ -10,7 +13,10 @@ import { AuthService } from '../../../shared/services/auth.service';
 export class LoginComponent implements OnInit {
     isLoading = false;
 
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(
+    private fireStore: AngularFirestore,
+    private auth: AuthService,
+    private router: Router) { }
 
   ngOnInit(): void {
     let user = localStorage.getItem('user') || undefined;
@@ -21,6 +27,26 @@ export class LoginComponent implements OnInit {
 
   async login(formData: any){
     this.isLoading = true;
-    this.auth.login(formData)
+    try {
+        
+        let userCredentials = await this.auth.login(formData);
+        let user = userCredentials.user!;
+    
+        this.fireStore
+            .doc('users/' + user.uid)
+            .get()
+            .subscribe(
+                 (snapshot) => {
+                    let result = snapshot.data();
+                    localStorage.setItem('user', JSON.stringify(result));
+                    this.router.navigate(['']);
+                },
+            )
+    } catch (err) {
+        this.isLoading = false;
+        alert(err);
+        console.log(err);
+    }
+   
   }
 }

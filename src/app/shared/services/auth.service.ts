@@ -32,25 +32,12 @@ export class AuthService {
       
   }
 
-  async login(userData: { email: string; password: string }) {
-    try {
-        let userCredentials = await this.auth.signInWithEmailAndPassword(
-            userData.email,
-            userData.password
-          );    
+   login(userData: { email: string; password: string }) {
+    return this.auth.signInWithEmailAndPassword(
+                    userData.email,
+                    userData.password
+                );    
 
-        let user = userCredentials.user!;
-        this.fireStore
-            .doc('users/' + user.uid)
-            .get()
-            .subscribe(shot =>{
-                let result = shot.data();
-                localStorage.setItem('user', JSON.stringify(result));
-                this.router.navigate(['']);
-            })
-    } catch (error) {
-        console.log(error);
-    }
   }
 
   setUserData(user: any, username: string) {
@@ -67,7 +54,6 @@ export class AuthService {
 
   async logout() {
     await this.auth.signOut();
-    console.log("removing user.............22222222");
     localStorage.removeItem('user');
     this.router.navigate(['login']);
   }
