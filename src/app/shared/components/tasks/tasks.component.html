@@ -3,7 +3,7 @@
   <div *ngFor="let item of items">
     <task [task]="item"></task>
   </div>
-  <p *ngIf="projectCount" class="mt-1">
+  <p  class="mt-1">
     <button
       (click)="toggle()"
       *ngIf="displayAddBtn; else displayAddComponent"

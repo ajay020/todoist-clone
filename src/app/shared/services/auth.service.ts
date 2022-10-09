@@ -26,20 +26,10 @@ export class AuthService {
   }
 
   signup(userData: any) {
-    const { username, email, password } = userData;
+    const { email, password } = userData;
 
-    this.auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        this.setUserData(user, username);
-        this.router.navigate(['']);
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        alert(errorMessage);
-        console.log(errorMessage);
-      });
+    return this.auth.createUserWithEmailAndPassword(email, password);
+      
   }
 
   async login(userData: { email: string; password: string }) {
